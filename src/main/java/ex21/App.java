@@ -6,21 +6,26 @@ package ex21;
 *  Copyright 2021 Jeyler Zabala
 
 Exercise 21 - Numbers to Names
-Many programs display information to the end user in one form but use a different form inside the program.
+Many programs display information to the end user in one form but use a different
+form inside the program.
 For example, you may show the word Blue on the screen,
 but behind the scenes you’ll have a numerical value for that color or an internal value because
-you may need to represent the textual description in another language for Spanish-speaking visitors.
+you may need to represent the textual description in another language for
+Spanish-speaking visitors.
 
 Write a program that converts a number from 1 to 12 to the corresponding month.
-Prompt for a number and display the corresponding calendar month, with 1 being January and 12 being December.
+Prompt for a number and display the corresponding calendar month, with 1 being January and 12
+being December.
 For any value outside that range, display an appropriate error message.
 
 Example Output
 Please enter the number of the month: 3
 The name of the month is March.
+
 Constraints
 Use a switch or case statement for this program.
 Use a single output statement for this program.
+
 Challenges
 Use a map or dictionary to remove the switch statement from the program.
 Support multiple languages. Prompt for the language at the beginning of the program.
@@ -32,6 +37,7 @@ public class App {
     public static void main(String[] args) {
 
         int numberMonth;
+        String monthName = null;
 
         Scanner sc = new Scanner(System.in);
         System.out.print("Please enter the number of the month: ");
@@ -39,44 +45,48 @@ public class App {
 
         switch (numberMonth) {
             case 1:
-                System.out.println("The name of the month is January.");
+                monthName = "January";
                 break;
             case 2:
-                System.out.println("The name of your month is February.");
+                monthName = "February";
                 break;
             case 3:
-                System.out.println("The name of the month is March.");
+                monthName = "March";
                 break;
             case 4:
-                System.out.println("The name of the month is April.");
+                monthName = "April";
                 break;
             case 5:
-                System.out.println("The name of the month is May.");
+                monthName = "May";
                 break;
             case 6:
-                System.out.println("The name of the month is June.");
+                monthName = "June";
                 break;
             case 7:
-                System.out.println("The name of the month is July.");
+                monthName = "July";
                 break;
             case 8:
-                System.out.println("The name of the month is August.");
+                monthName = "August";
                 break;
             case 9:
-                System.out.println("The name of the month is September.");
+                monthName = "September";
                 break;
             case 10:
-                System.out.println("The name of the month is October.");
+                monthName = "October";
                 break;
             case 11:
-                System.out.println("The name of the month is November.");
+                monthName = "November";
                 break;
             case 12:
-                System.out.println("The name of the month is December.");
+                monthName = "December";
                 break;
             default:
                 System.out.println("Input not valid.");
                 break;
+        }
+
+        if (monthName != null) {
+            System.out.printf("The name of the month is %s.\n", monthName);
         }
     }
 }
